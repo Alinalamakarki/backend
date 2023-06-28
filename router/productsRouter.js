@@ -70,6 +70,12 @@ router.get("/dashboard/uploads",
 
 
 module.exports = router;
+
+
+
+
+
+
 /// new code 
 const productsRoutes = require("express").Router();
 const productController = require("./../controller/productController");
