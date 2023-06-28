@@ -1,16 +1,18 @@
-module.exports = {
-    HOST: "localhost",
-    USER:"root",
-    PASS:"",
-    POST: 3360,
+const { DB_USERNAME, DB_PASSWORD, DB_PORT } = require("./secrets");
 
-    // database identification
-    db: "second_hand",
-    dialect: "mysql",
-    pool:{
-        max: 5,
-        min: 0,
-        accurate: 30000,
-        idle: 10000
-    }
-}
+module.exports = {
+  HOST: "localhost",
+  USER: DB_USERNAME,
+  PASS: DB_PASSWORD || "",
+  POST: DB_PORT,
+
+  // database identification
+  db: "second_hand",
+  dialect: "mysql",
+  pool: {
+    max: 5,
+    min: 0,
+    accurate: 30000,
+    idle: 10000,
+  },
+};

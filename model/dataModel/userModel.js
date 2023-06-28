@@ -16,6 +16,9 @@ module.exports = (sequelize, Sequelize) => {
         },
         role: {
             type: Sequelize.STRING,
+        },
+        refreshToken: {  // jwt
+            type: Sequelize.STRING,
         }
     })
 
